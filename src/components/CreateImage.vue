@@ -2,7 +2,7 @@
     <modal name="image-modal" height="auto" @before-open="beforeOpen" >
         <div class="box">
             <div class="border-bottom p-3 modal-header">
-                Añadir nueva imagen
+                New Image
             </div>
             <div class="p-3 flex-col">
                 <alv-form action="http://127.0.0.1:8000/api/images" id="image-create" method="POST" :spinner="true"
@@ -10,19 +10,19 @@
                     <div class="row">
                         <div class="mb-3 col-md-12">
                             <div class="form-group">
-                                <label class="w-100 text-start" for="name">Nombre</label>
+                                <label class="w-100 text-start" for="name">Name</label>
                                 <input v-model="image.name" type="text" class="form-control" name="name">
                             </div>
                         </div>
                         <div class="mb-3 col-md-12">
                             <div class="form-group">
-                               <label class="w-100 text-start" for="name">Fecha</label>
+                               <label class="w-100 text-start" for="name">Date</label>
                                   <flat-pickr v-model="image.date" name="date" class="form-control"></flat-pickr>
                             </div>
                         </div>
                          <div class="mb-3 col-md-12">
                             <div class="form-group">
-                               <label class="w-100 text-start" for="name">Imagen</label>
+                               <label class="w-100 text-start" for="name">Image</label>
                                   <VueFileAgent
                                     ref="vueFileAgent"
                                     :theme="'list'"
@@ -32,7 +32,7 @@
                                     :accept="'image/*'"
                                     maxSize="1MB"
                                     :maxFiles="1"
-                                    helpText="Carga tus imágenes aqui"
+                                    helpText="Load your image here"
                                     :errorText="{
                                                 type: 'Tipo de archivo invalido. Solo las imágenes estan permitidas',
                                                 size: 'Las imágenes no pueden exceder el 1mb',

@@ -4,17 +4,17 @@
        <h1>{{ msg }}</h1>
     </div>
     <div class="button-content text-end">
-      <button type="button" @click="showModal" class="btn btn-primary btn-lg">Agregar</button>
+      <button type="button" @click="showModal" class="btn btn-primary btn-lg">Add new image</button>
     </div>
      <input type="text" class="form-control mb-4 w-75 m-auto" v-model="query" placeholder="Search">
     <div v-if="searchImages.length > 0" class="w-75 m-auto row p-3">
      
         <div class="col-12 col-sm-6 col-md-3 border" v-for="(image,k) in searchImages" :key="k">
-            <label for="name" class="w-100 text-start text-primary">Nombre: {{image.name}}</label>
+            <label for="name" class="w-100 text-start text-primary">Name: {{image.name}}</label>
             <img :src="'http://127.0.0.1:8000'+image.image_url" class="img-fluid" alt="Responsive image">
             <div class="flex container">
-              <label for="date" class="w-100 text-start">Fecha: {{image.date}}</label>
-              <button type="button" @click="deleteImage(image.id)" class="btn btn-outline-danger">Eliminar</button>
+              <label for="date" class="w-100 text-start">Date: {{image.date}}</label>
+              <button type="button" @click="deleteImage(image.id)" class="btn btn-outline-danger">Delete</button>
             </div>
         </div>
     </div>
